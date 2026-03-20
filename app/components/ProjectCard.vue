@@ -1,0 +1,82 @@
+<script setup lang="ts">
+defineProps<{
+  titulo: string
+  descripcion: string
+  tecnologias: string[]
+}>()
+</script>
+
+<template>
+  <div class="card">
+    <h3 class="title">{{ titulo }}</h3>
+    <p class="desc">{{ descripcion }}</p>
+
+    <div class="techs">
+      <span v-for="(tech, i) in tecnologias" :key="i" class="tech">
+        {{ tech }}
+      </span>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+/* CARD */
+.card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 15px;
+  color: black;
+  transition: 0.2s;
+}
+
+/* DARK MODE */
+.dark .card {
+  background: #020617;
+  border: 1px solid #1e293b;
+  color: white;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* TITULO */
+.title {
+  margin-bottom: 8px;
+  color: black;
+}
+
+.dark .title {
+  color: white;
+}
+
+/* DESCRIPCIÓN */
+.desc {
+  font-size: 14px;
+  color: #374151;
+}
+
+.dark .desc {
+  color: #94a3b8;
+}
+
+/* TECNOLOGÍAS */
+.techs {
+  margin-top: 10px;
+}
+
+.tech {
+  background: #e5e7eb;
+  color: black;
+  padding: 4px 8px;
+  border-radius: 6px;
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.dark .tech {
+  background: #1e293b;
+  color: white;
+}
+</style>

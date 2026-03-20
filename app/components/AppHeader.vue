@@ -3,7 +3,7 @@
 <template>
   <div class="profile">
     <div class="avatar">
-      <img src="/profile/juan.jpeg" alt="profile" />
+   <img src="/profile/juan.jpeg" />
     </div>
     <h1 id="nombre">Juan Rangel Neri</h1>
   </div>

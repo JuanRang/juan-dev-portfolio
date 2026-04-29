@@ -3,6 +3,7 @@ defineProps<{
   titulo: string
   descripcion: string
   tecnologias: string[]
+  url?: string
 }>()
 </script>
 
@@ -15,6 +16,9 @@ defineProps<{
       <span v-for="(tech, i) in tecnologias" :key="i" class="tech">
         {{ tech }}
       </span>
+      <a v-if="url" :href="url" target="_blank" rel="noopener noreferrer" class="url-link">
+        Ver proyecto
+      </a>
     </div>
   </div>
 </template>
@@ -78,5 +82,19 @@ defineProps<{
 .dark .tech {
   background: #1e293b;
   color: white;
+}
+
+.url-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #3b82f6;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.url-link:hover {
+  background: #1e293b;
 }
 </style>

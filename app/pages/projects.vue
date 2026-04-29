@@ -6,9 +6,12 @@ const proyectos = [
     tecnologias: ['Vue', 'Nuxt', 'CSS']
   },
   {
-    titulo: 'API REST',
+     
+    titulo: 'Herramientas de Producción',
     descripcion: 'Backend con Node y Express',
-    tecnologias: ['Node', 'Express']
+    tecnologias: ['Nuxt', 'npm', 'Express'],
+    url: 'https://dev-herramientas-produccion.vercel.app/'
+  
   },
   {
     titulo: 'App Escolar',
@@ -30,6 +33,7 @@ const proyectos = [
         :titulo="p.titulo"
         :descripcion="p.descripcion"
         :tecnologias="p.tecnologias"
+        :url="p.url"
       />
     </div>
 

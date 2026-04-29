@@ -40,7 +40,7 @@ const handleSubmit = async () => {
 
   } catch (error) {
     errorMsg.value = 'Ocurrió un error al enviar el mensaje.'
-    console.error(error) // 👈 agrega esto para ver el error real
+    console.error(error) //  agrega esto para ver el error real
   } finally {
     loading.value = false
   }
@@ -116,10 +116,9 @@ const handleSubmit = async () => {
 .container {
   width: 100%;
   min-height: 100vh;
-  background: #16001f;
+  background: transparent;
   padding: 20px;
 }
-
 .contacto {
   display: flex;
   justify-content: center;

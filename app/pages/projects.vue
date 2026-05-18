@@ -1,9 +1,10 @@
 <script setup lang="ts">
 const proyectos = [
   {
-    titulo: 'Portafolio Web',
-    descripcion: 'Mi página personal hecha con Nuxt',
-    tecnologias: ['Vue', 'Nuxt', 'CSS']
+    titulo: 'Ajedrez 3D',
+    descripcion: 'Juego de ajedrez en 3D hecho con Three.js',
+    tecnologias: ['Vue', 'Three.js', 'CSS'],
+    url: 'https://ajedrez3d.vercel.app/'
   },
   {
      
@@ -14,9 +15,10 @@ const proyectos = [
   
   },
   {
-    titulo: 'App Escolar',
+    titulo: 'Imagen 3D',
     descripcion: 'Sistema escolar',
-    tecnologias: ['Vue', 'Firebase']
+    tecnologias: ['Vue', 'Firebase'],
+    url: 'https://proyecto-3d-nine.vercel.app/'
   }
 ]
 </script>

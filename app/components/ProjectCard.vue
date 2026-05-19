@@ -24,14 +24,22 @@ defineProps<{
 </template>
 
 <style scoped>
-/* CARD */
 .card {
   background: white;
   border: 1px solid #e5e7eb;
   border-radius: 12px;
-  padding: 15px;
+  padding: 12px;
   color: black;
   transition: 0.2s;
+
+  /* 👇 clave para que no se salga */
+  width: 100%;
+  max-width: 280px;
+  box-sizing: border-box;
+}
+
+.card:hover {
+  transform: translateY(-3px);
 }
 
 /* DARK MODE */
@@ -41,24 +49,18 @@ defineProps<{
   color: white;
 }
 
-.card:hover {
-  transform: translateY(-3px);
-}
-
 /* TITULO */
 .title {
-  margin-bottom: 8px;
-  color: black;
-}
-
-.dark .title {
-  color: white;
+  margin-bottom: 6px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 /* DESCRIPCIÓN */
 .desc {
-  font-size: 14px;
+  font-size: 13px;
   color: #374151;
+  margin-bottom: 10px;
 }
 
 .dark .desc {
@@ -67,16 +69,19 @@ defineProps<{
 
 /* TECNOLOGÍAS */
 .techs {
-  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
 }
 
+/* TAGS */
 .tech {
   background: #e5e7eb;
   color: black;
-  padding: 4px 8px;
+  padding: 3px 7px;
   border-radius: 6px;
-  margin-right: 5px;
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .dark .tech {
@@ -84,17 +89,21 @@ defineProps<{
   color: white;
 }
 
+/* BOTÓN */
 .url-link {
   display: inline-block;
   margin-top: 10px;
-  padding: 8px 16px;
+  padding: 6px 12px;
+  font-size: 12px;
   background: #3b82f6;
   color: white;
   text-decoration: none;
   border-radius: 6px;
+  width: 100%;
+  text-align: center;
 }
 
 .url-link:hover {
-  background: #1e293b;
+  background: #2563eb;
 }
 </style>

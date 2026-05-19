@@ -19,6 +19,12 @@ const proyectos = [
     descripcion: 'Sistema escolar',
     tecnologias: ['Vue', 'Firebase'],
     url: 'https://proyecto-3d-nine.vercel.app/'
+  },
+  {
+    titulo: 'Descomprimison de imagenes 3D',
+    descripcion: 'Sistema escolar',
+    tecnologias: ['Vue', 'Firebase'],
+    url: 'https://descomprimison.vercel.app/'
   }
 ]
 </script>
@@ -27,7 +33,6 @@ const proyectos = [
   <div>
     <h1>Mis Proyectos</h1>
 
-    <!-- 👇 CONTENEDOR GRID -->
     <div class="grid">
       <ProjectCard
         v-for="(p, i) in proyectos"
@@ -45,7 +50,13 @@ const proyectos = [
 <style scoped>
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+
+  /* 👇 esto evita que se estire toda la pantalla */
+  max-width: 900px;
+  margin: 0 auto;
+
+  padding: 10px;
 }
 </style>

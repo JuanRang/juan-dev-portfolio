@@ -16,18 +16,13 @@ body,
   position: fixed;
   inset: 0;
   z-index: 0;
-
   background: #bc5ee7;
-
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
   grid-auto-rows: 40px;
-
   font-size: 28px;
   color: rgba(0, 150, 255, 0.4);
-
   font-family: "Noto Sans JP", "Yu Gothic", "MS Gothic", monospace;
-
   overflow: hidden;
 }
 
@@ -92,17 +87,14 @@ body,
 /* ESTILOS HEREDADOS DE VAINILLA */
 
 .container {
-  background-color: rgba(20, 20, 30, 0.7);
+  background-color: rgba(20, 20, 30, 0.7); /* 👈 ¡ESTO es lo gris oscuro que querías quitar! */
   padding: 2rem;
   border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   max-width: 500px;
   text-align: center;
   position: relative;
   z-index: 2;
   color: #ffffff;
-  font-family: 'Fira Code', monospace;
-  transition: 0.3s;
 }
 
 .tags span {
